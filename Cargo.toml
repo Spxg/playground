@@ -1,0 +1,29 @@
+[package]
+name = "playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasm-bindgen = "0.2.105"
+wasm-bindgen-test-macro = "0.3.55"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.55"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[patch.crates-io]
+# wasm-bindgen = { path = "../wasm-bindgen" }
+# wasm-bindgen-test = { path = "../wasm-bindgen/crates/test" }
+# wasm-bindgen-test-macro = { path = "../wasm-bindgen/crates/test-macro" }
+# wasm-bindgen-futures = { path = "../wasm-bindgen/crates/futures" }
+# web-sys = { path = "../wasm-bindgen/crates/web-sys" }
+# js-sys = { path = "../wasm-bindgen/crates/js-sys" }
+
+wasm-bindgen = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
+wasm-bindgen-test = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
+wasm-bindgen-test-macro = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
+wasm-bindgen-futures = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
+web-sys = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
+js-sys = { git = "https://github.com/wasm-bindgen/wasm-bindgen", branch = "w/bench" }
