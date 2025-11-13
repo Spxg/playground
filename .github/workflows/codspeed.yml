@@ -19,7 +19,7 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
       - run: |
-          git clone git@github.com:wasm-bindgen/wasm-bindgen.git -b w/bench
+          git clone https://github.com/wasm-bindgen/wasm-bindgen.git -b w/bench
           cd w/bench
           cargo install --path crates/cli
           cd ..
