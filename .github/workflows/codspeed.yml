@@ -27,5 +27,5 @@ jobs:
         uses: CodSpeedHQ/action@v4
         with:
           mode: walltime
-          run: cargo run --manifest-path wcodspeed/Cargo.toml target/wbg_bench.json
+          run: ./benchmark.sh
           token: ${{ secrets.CODSPEED_TOKEN }} # optional for public repos
