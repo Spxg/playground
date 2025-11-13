@@ -22,9 +22,6 @@ jobs:
           git clone https://github.com/wasm-bindgen/wasm-bindgen.git -b w/bench
           cd wasm-bindgen
           cargo install --path crates/cli
-          cd ..
-          export CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUNNER=wasm-bindgen-test-runner
-          cargo bench --target wasm32-unknown-unknown
 
       - name: Run the benchmarks
         uses: CodSpeedHQ/action@v4
